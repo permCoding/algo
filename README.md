@@ -21,6 +21,13 @@
 
 ---  
 
+> Установить:  
+
+[Python](https://www.python.org/)  
+[VS Code](https://code.visualstudio.com/download)  
+
+---  
+
 > Базовые темы:  
 
 - диалог пользователя с программой  
