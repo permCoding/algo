@@ -1,22 +1,98 @@
-# algo
-### Пример оформления с помощью разметки markdown
+### Алгоритмизация и программирование  
 
-_курсив_  
-__полужирный__  
+### Информатика с основами программирования
 
----
+> Беляков Андрей Юрьевич  
 
-1  
-2  
-3  
-4
-5
-6
+---  
 
----
+> Дистант - трансляция Лекций:  
 
-``` Python
-  if a > 0:
-    print(a)
+[1 -- BBB --](https://bbb.psaa.ru/rooms/clu-pi0-lck-coa/join)  
+[2 -- Yandex --](https://telemost.yandex.ru/j/49275900163503)  
+
+---  
+
+> Stepik - там контрольные работы  
+
+[Алгоритмизация и программирование](https://stepik.org/course/64867/)  
+[Алгоритмы и структуры данных](https://stepik.org/course/61148/)  
+[Анализ и разработка алгоритмов](https://stepik.org/course/82800/)  
+
+---  
+
+> Базовые темы:  
+
+- диалог пользователя с программой  
+- операторы ветвления и цикла  
+- числа, строки, списки  
+- файлы (txt, csv, json)  
+- сбор и обработка данных  
+- построение графиков функций  
+- обработка изображений  
+- базы данных  
+
+---  
+
+
+> в VS Code не отображается кириллица при запуске программы:  
+
+```txt
+- в settings.json меняем code-runner.executorMap
+было  - "python": "python -u"
+стало - "python": "set PYTHONIOENCODING=utf8 && py -u"
+
+можно в settings добавить целый раздел:
+
+    "code-runner.executorMap": {
+        "javascript": "node",
+        "php": "C:\\php\\php.exe",
+        "python": "set PYTHONIOENCODING=utf8 && py -u",
+        "perl": "perl",
+        "ruby": "C:\\Ruby23-x64\\bin\\ruby.exe",
+        "go": "go run",
+        "html": "\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\"",
+        "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
+        "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+        "cpp": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
+    },
+
 ```
 
+---  
+
+```txt
+Включение альтернативной версии Python
+
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
+sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 2
+
+sudo update-alternatives --list python3
+
+update-alternatives --config python3
+
+sudo apt install python3-pip
+
+sudo python3.12 -m pip install --upgrade pip
+
+sudo apt-get install python-is-python3
+
+sudo apt autoremove
+
+переустановка pip:
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
+sudo python3.12 get-pip.py 
+```
+
+---  
+
+```txt
+venv
+
+sudo apt install -y python3.12-venv
+  или: sudo apt install -y python3-venv
+  иногда: sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
+python -m venv myenv
+source myenv/bin/activate
+для выхода: deactivate
+```
