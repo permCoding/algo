@@ -2,7 +2,7 @@
 
 ### Информатика с основами программирования
 
-> Беляков Андрей Юрьевич  
+**Беляков Андрей Юрьевич**  
 
 ---  
 
@@ -28,6 +28,12 @@
 
 ---  
 
+> некоторые другие программы и технологии:  
+
+- [редактор Блок Схем](https://disk.yandex.ru/d/sp44dPLmktBaVQ)  
+
+---  
+
 > Базовые темы:  
 
 - диалог пользователя с программой  
@@ -38,11 +44,11 @@
 - построение графиков функций  
 - обработка изображений  
 - базы данных  
+- алгоритмы  
 
 ---  
 
-
-> в VS Code не отображается кириллица при запуске программы:  
+> если в VS Code не отображается кириллица при запуске программы:  
 
 ```txt
 - в settings.json меняем code-runner.executorMap
@@ -63,14 +69,15 @@
         "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
         "cpp": "cd $dir && g++ -std=c++14 $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt"
     },
-
 ```
 
 ---  
 
-```txt
-Включение альтернативной версии Python
+#### Для Linux  
 
+Включение альтернативной версии Python:  
+
+```txt
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.10 1
 sudo update-alternatives --install /usr/bin/python3 python3 /usr/bin/python3.12 2
 
@@ -85,17 +92,17 @@ sudo python3.12 -m pip install --upgrade pip
 sudo apt-get install python-is-python3
 
 sudo apt autoremove
+```
 
 переустановка pip:
+```
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py 
 sudo python3.12 get-pip.py 
 ```
 
----  
+venv  
 
 ```txt
-venv
-
 sudo apt install -y python3.12-venv
   или: sudo apt install -y python3-venv
   иногда: sudo apt install -y build-essential libssl-dev libffi-dev python3-dev
