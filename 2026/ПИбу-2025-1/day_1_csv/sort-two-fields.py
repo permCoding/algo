@@ -12,14 +12,19 @@ a = [
 #     1. по первому параметру - по номеру по убыванию
 #     2. по второму параметру - по названию по возрастанию
 
+# в Python используется стабильная сортировка
 srtd_0 = sorted(a, key = lambda x : x[0])
-t = sorted(srtd_0, key = lambda x : x[1], reverse = True)  
+t = sorted(srtd_0, key = lambda x : x[1], reverse = True)
+# и так далее можно сортировать по любому количеству параметров
 
-# t = sorted(
-#     sorted(a, key = lambda x : x[0]), 
-#     key = lambda x : x[1], 
-#     reverse = True
-# )  
+# ORDER BY name DESC, ball ASC, id ASC - это сортировка в SQL
+
+
+t = sorted(
+    sorted(a, key = lambda x : x[0]), 
+    key = lambda x : x[1], 
+    reverse = True
+)  
 
 for row in t: print(row[1], row[0])
 
